@@ -48,7 +48,6 @@
   align-items: center;
   filter: drop-shadow(1px 1px 5px #050505);
   -webkit-filter: drop-shadow(1px 1px 5px #050505);
-  /* border: 1px solid red; */
 }
 
 .hero__avatar {
@@ -67,7 +66,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* position: relative; */
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -97,17 +95,16 @@
 
 .hero__contentTitle {
   width: 100%;
-  /* border: 1px solid red; */
 }
 
 .hero__contentTitle > h2 {
   font-size: 2.2rem;
-  text-align: start;
+  text-align: center;
 }
 
 .hero__contentOverview {
   width: 100%;
-  text-align: start;
+  text-align: center;
   margin-bottom: 0.5rem;
   /* border: 1px solid red; */
 }
@@ -157,7 +154,7 @@
   background-color: rgb(56, 54, 54);
 }
 
-/* MEDIA QUERIES */
+/********** MEDIA QUERIES **********/
 
 /* Tablet Portrait */
 
@@ -191,6 +188,14 @@
     -o-transform: translateX(0);
   }
 
+  .hero__contentTitle > h2 {
+    text-align: start;
+  }
+
+  .hero__contentOverview {
+    text-align: start;
+  }
+
   .hero__buttonContainer {
     justify-content: flex-start;
   }
@@ -199,18 +204,14 @@
 /* Desktop HD */
 
 @media screen and (min-width: 1280px) {
-  /* .hero__contentBox {
-    top: 32%;
-  } */
+  .hero__contentBox {
+    margin-bottom: 4rem;
+  }
 }
 
 /* Tablet Landscape 12.9 inch */
 
 @media screen and (min-width: 1366px) {
-  /* .hero__contentBox {
-    top: 45%;
-  } */
-
   .hero__buttons:nth-child(1) {
     margin-right: 1.5rem;
   }
@@ -221,7 +222,6 @@
 @media screen and (min-width: 1920px) {
   .hero__contentBox {
     margin-left: 3rem;
-    /* top: 35%; */
     width: 45rem;
     height: 28rem;
     padding: 2.5rem;
@@ -254,6 +254,7 @@
   .hero__contentBox {
     width: 65rem;
     height: 35rem;
+    margin-bottom: 8rem;
     padding: 3rem;
   }
 

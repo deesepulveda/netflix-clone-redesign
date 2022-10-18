@@ -1,12 +1,16 @@
 .movie__posterBox {
+  width: auto;
+  height: 20rem;
   position: relative;
-  padding: 0 1rem;
   cursor: pointer;
+  /* border: 1px solid green; */
 }
 
 .movie__posterImages {
   width: 18rem;
   height: 100%;
+  padding: 0 1rem;
+  /* border: 1px solid red; */
 }
 
 .movie__posterImages > img {
@@ -42,9 +46,25 @@
 
 /* MEDIA QUERIES */
 
+/* Tablet Portrait */
+
+@media screen and (min-width: 768px) {
+  .movie__posterBox {
+    height: 25rem;
+  }
+
+  .movie__posterImages {
+    width: 20rem;
+  }
+}
+
 /* Desktop UltraWide HD */
 
 @media screen and (min-width: 3440px) {
+  .movie__posterBox {
+    height: 35rem;
+  }
+
   .movie__posterImages {
     width: 25rem;
   }

@@ -5,20 +5,10 @@
 
 .row__section {
   width: 100vw;
-  height: 20rem;
+  height: auto;
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   /* Works for FireFox */
   scrollbar-width: none;
-}
-
-/* MEDIA QUERIES */
-
-/* Desktop UltraWide HD */
-
-@media screen and (min-width: 3440px) {
-  .row__section {
-    height: 35rem;
-  }
 }
