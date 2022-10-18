@@ -3,13 +3,14 @@ import "./Movie.css";
 
 function Movie({ item }) {
   return (
-    <div>
+    <div className="movie__posterBox">
       <div className="movie__posterImages">
         <img
           src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`}
           alt={item.title}
         />
       </div>
+      <div className="movie__posterTitles">{item.title || item.name}</div>
     </div>
   );
 }
