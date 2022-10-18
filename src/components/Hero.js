@@ -1,10 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "../axios";
 import "./Hero.css";
+import requests from "../Requests";
 
 function Hero() {
+  const [show, setShow] = useState(false);
+  const [movie, setMovie] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const request = await axios.get(requests.fetchNetflixOriginals);
+      setMovie(request.data.results[Math.floor(Math.random() * 19)]);
+
+      return request;
+    };
+
+    fetchData();
+  }, []);
+
+  // Truncate String
+  const truncatingString = (str, num) => {
+    if (str?.length > num) {
+      return str.slice(0, num) + "...";
+    } else {
+      return str;
+    }
+  };
+
+  const transitionHeader = () => {
+    if (window.scrollY > 100) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", transitionHeader);
+    return () => window.removeEventListener("scroll", transitionHeader);
+  }, []);
+
   return (
-    <div className="hero__container">
-      <header className="hero__header">
+    <div
+      className="hero__container"
+      style={{
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+      }}
+    >
+      <header className={`hero__header ${show && "header__black"}`}>
         <div className="hero__logoBox">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
@@ -22,15 +67,10 @@ function Hero() {
       </header>
       <div className="hero__contentBox">
         <div className="hero__contentTitle">
-          <h2>Nope</h2>
+          <h2>{movie?.name}</h2>
         </div>
         <div className="hero__contentOverview">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-            similique reiciendis culpa fugiat optio enim ad corporis natus,
-            numquam deleniti suscipit nostrum impedit ea maxime fuga architecto
-            incidunt recusandae! Dolorum.
-          </p>
+          <p>{truncatingString(movie?.overview, 100)}</p>
         </div>
         <div className="hero__buttonContainer">
           <button className="hero__buttons">play</button>

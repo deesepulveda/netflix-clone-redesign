@@ -2,10 +2,10 @@
   width: 100vw;
   height: 45vh;
   position: relative;
-  background: url(/src/assets/nope-movie-jordan-peele-poster-cast.png);
+  /* background: url(/src/assets/nope-movie-jordan-peele-poster-cast.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .hero__header {
@@ -17,6 +17,15 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.header__black {
+  background-color: #050505;
 }
 
 .hero__logoBox {
@@ -35,11 +44,11 @@
 
 .hero__avatarBox {
   width: 4rem;
-  height: 100%;
+  height: 90%;
   margin-right: 1.5rem;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   /* border: 1px solid red; */
 }
 
@@ -119,7 +128,6 @@
 .hero__buttons {
   width: 10rem;
   height: 2.25rem;
-  padding: 0.5rem 2rem;
   font-size: 1.3rem;
   text-transform: uppercase;
   color: #fff;
@@ -152,6 +160,8 @@
 
 /* MEDIA QUERIES */
 
+/* Tablet Portrait */
+
 @media screen and (min-width: 768px) {
   .hero__logoBox {
     width: 10rem;
@@ -162,22 +172,110 @@
   }
 
   .hero__contentBox {
-    width: 40rem;
+    width: 35rem;
     height: 20rem;
+    padding: 2.5rem;
   }
 }
 
-@media screen and (min-width: 1024px) {
+/* Tablet Landscape */
+
+@media screen and (min-width: 1080px) {
   .hero__contentBox {
-    width: 35rem;
-    height: 20rem;
+    margin-left: 2rem;
     padding: 2rem 3rem;
-    top: 35%;
-    left: 20%;
-    position: relative;
+    top: 38%;
+    left: 0;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 
   .hero__buttonContainer {
     justify-content: flex-start;
+  }
+}
+
+/* Desktop HD */
+
+@media screen and (min-width: 1280px) {
+  .hero__contentBox {
+    top: 32%;
+  }
+}
+
+/* Tablet Landscape 12.9 inch */
+
+@media screen and (min-width: 1366px) {
+  .hero__contentBox {
+    top: 45%;
+  }
+
+  .hero__buttons:nth-child(1) {
+    margin-right: 1.5rem;
+  }
+}
+
+/* Desktop Full HD */
+
+@media screen and (min-width: 1920px) {
+  .hero__contentBox {
+    margin-left: 3rem;
+    top: 35%;
+    width: 45rem;
+    height: 28rem;
+    padding: 2.5rem;
+  }
+
+  .hero__contentTitle > h2 {
+    font-size: 4rem;
+  }
+
+  .hero__contentOverview > p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__buttons {
+    width: 12rem;
+    height: 2.75rem;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+  }
+}
+
+/* Desktop UltraWide HD */
+
+@media screen and (min-width: 3440px) {
+  .hero__contentBox {
+    width: 65rem;
+    height: 35rem;
+    padding: 3rem;
+  }
+
+  .hero__contentTitle > h2 {
+    font-size: 5rem;
+  }
+
+  .hero__contentOverview > p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__buttons {
+    width: 17rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
   }
 }
