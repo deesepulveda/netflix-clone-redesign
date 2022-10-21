@@ -1,6 +1,6 @@
 .hero__container {
   width: 100vw;
-  height: 45vh;
+  height: 65vh;
   position: relative;
 }
 
@@ -98,8 +98,9 @@
 }
 
 .hero__contentTitle > h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: center;
+  font-weight: 600;
 }
 
 .hero__contentOverview {

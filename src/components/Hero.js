@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "../axios";
 import "./Hero.css";
 import requests from "../Requests";
 
 function Hero() {
-  const [show, setShow] = useState(false);
+  const [fade, setFade] = useState(false);
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
@@ -29,9 +30,9 @@ function Hero() {
 
   const transitionHeader = () => {
     if (window.scrollY > 100) {
-      setShow(true);
+      setFade(true);
     } else {
-      setShow(false);
+      setFade(false);
     }
   };
 
@@ -49,7 +50,7 @@ function Hero() {
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
       }}
     >
-      <header className={`hero__header ${show && "header__black"}`}>
+      <header className={`hero__header ${fade && "header__black"}`}>
         <div className="hero__logoBox">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
@@ -58,11 +59,13 @@ function Hero() {
           />
         </div>
         <div className="hero__avatarBox">
-          <img
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
-            alt=""
-            className="hero__avatar"
-          />
+          <Link to="/signUp">
+            <img
+              src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
+              alt=""
+              className="hero__avatar"
+            />
+          </Link>
         </div>
       </header>
       <div className="hero__contentBox">

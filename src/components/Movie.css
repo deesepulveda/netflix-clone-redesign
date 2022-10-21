@@ -3,14 +3,12 @@
   height: 20rem;
   position: relative;
   cursor: pointer;
-  /* border: 1px solid green; */
 }
 
 .movie__posterImages {
   width: 18rem;
   height: 100%;
   padding: 0 1rem;
-  /* border: 1px solid red; */
 }
 
 .movie__posterImages > img {
@@ -44,7 +42,7 @@
   top: 0;
 }
 
-/* MEDIA QUERIES */
+/********** MEDIA QUERIES **********/
 
 /* Tablet Portrait */
 

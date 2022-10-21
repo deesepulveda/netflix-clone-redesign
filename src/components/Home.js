@@ -24,7 +24,7 @@ const Home = () => {
         fetchURL={requests.fetchDocumentaries}
       />
       <Row rowID="8" title="Romance" fetchURL={requests.fetchRomanceMovies} />
-      {/* <Footer /> */}
+      <div style={{ width: "100vw", height: "2rem" }}></div>
     </>
   );
 };

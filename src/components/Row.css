@@ -1,5 +1,6 @@
 .row__sectionTitle {
   text-align: start;
+  text-transform: initial;
   padding: 1rem;
 }
 
@@ -11,4 +12,8 @@
   overflow-x: scroll;
   /* Works for FireFox */
   scrollbar-width: none;
+}
+
+.row__sectionTitle {
+  font-weight: 400;
 }

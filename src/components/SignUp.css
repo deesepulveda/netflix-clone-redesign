@@ -1,0 +1,173 @@
+.signUp {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.signUp::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #050505, #0505058c);
+  z-index: -1;
+}
+
+.signUp::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("https://bramptonist.com/wp-content/uploads/2018/06/netflix-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.signUp__contentContainer {
+  min-width: 30rem;
+  max-width: 140rem;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.signUp__logo,
+.signIn__button {
+  margin-top: 2rem;
+}
+
+.signUp__logo {
+  width: 10rem;
+  height: auto;
+  margin-left: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.signUp__logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.signIn__button {
+  margin-right: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem 1.7rem;
+  font-size: 1.5rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: red;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.signUp__contentBox {
+  width: 80%;
+  min-width: 300px;
+  max-width: 60rem;
+  height: 40rem;
+  /* padding: 2rem; */
+  text-transform: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.signUp__contentBox > h1,
+h2,
+h3,
+.signUp__input {
+  margin-bottom: 2rem;
+}
+
+.signUp__contentBox > h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.signUp__contentBox > h2,
+h3 {
+  font-weight: 400;
+}
+
+.signUp__contentBox > h2 {
+  font-size: 1.75rem;
+}
+
+.signUp__contentBox > h3 {
+  font-size: 1.25rem;
+}
+
+.signUp__form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUp__input {
+  width: 100%;
+  max-width: 40rem;
+  height: 4rem;
+  outline: none;
+  border: none;
+}
+
+.signUp__button {
+  height: 4rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: red;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+/********** MEDIA QUERIES **********/
+
+/* Tablet Landscape */
+
+@media screen and (min-width: 1080px) {
+  .signUp__form {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signUp__input {
+    margin-bottom: 0;
+    margin-right: 0.25rem;
+  }
+}
