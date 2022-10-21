@@ -38,7 +38,7 @@
 }
 
 .signUp__logo,
-.signIn__button {
+.signUp__signInButton {
   margin-top: 2rem;
 }
 
@@ -59,13 +59,13 @@
   object-fit: contain;
 }
 
-.signIn__button {
+.signUp__signInButton {
   margin-right: 2rem;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.5rem 2rem;
-  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
   color: #fff;
   outline: none;
   border: none;
@@ -133,7 +133,7 @@ h3 {
 }
 
 .signUp__input,
-.signUp__form > button {
+.signUp__formButton {
   height: 4rem;
   outline: none;
   border: none;
@@ -145,7 +145,7 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.signUp__form > button {
+.signUp__formButton {
   padding: 0.5rem 2rem;
   font-size: 1.6rem;
   color: #fff;
@@ -185,7 +185,7 @@ h3 {
   }
 
   .signUp__input,
-  .signUp__form > button {
+  .signUp__formButton {
     height: 5rem;
   }
 

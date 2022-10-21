@@ -37,14 +37,10 @@
   margin: 0 auto;
 }
 
-.signIn__logo,
-.signUp__button {
-  margin-top: 2rem;
-}
-
 .signIn__logo {
   width: 10rem;
   height: auto;
+  margin-top: 2rem;
   margin-left: 2rem;
   position: absolute;
   top: 0;
@@ -105,7 +101,7 @@
 }
 
 .signIn__form > input,
-button {
+.signIn__signInButton {
   height: 4rem;
   color: #fff;
   outline: none;
@@ -123,7 +119,7 @@ button {
   background-color: rgb(74, 71, 71);
 }
 
-.signIn__form > button {
+.signIn__signInButton {
   width: 90%;
   margin: 1.5rem 0;
   font-size: 1.5rem;
@@ -170,12 +166,8 @@ button {
   }
 
   .signIn__form > input,
-  button {
+  .signIn__signInButton {
     height: 5rem;
-  }
-
-  .signIn__form > h3 {
-    text-align: start;
   }
 }
 

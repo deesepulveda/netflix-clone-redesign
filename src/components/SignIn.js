@@ -12,13 +12,12 @@ function SignIn() {
             alt=""
           />
         </div>
-
         <div className="signIn__contentBox">
           <form className="signIn__form">
             <h1>Sign In</h1>
             <input type="email" placeholder=" Email" required />
             <input type="text" required placeholder=" Password" />
-            <button>Sign In</button>
+            <button className="signIn__signInButton">Sign In</button>
             <h3>
               <span>New to Netflix? </span>
               <Link to="/signup" className="signIn__Link">

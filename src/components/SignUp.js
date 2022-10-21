@@ -13,7 +13,7 @@ function SignUp() {
           />
         </div>
         <Link to="/signin">
-          <button className="signIn__button">Sign In</button>
+          <button className="signUp__signInButton">Sign In</button>
         </Link>
         <div className="signUp__contentBox">
           <h1>Unlimited movies, TV shows, and more.</h1>
@@ -29,7 +29,7 @@ function SignUp() {
               placeholder=" Email"
               required
             />
-            <button>Get Started</button>
+            <button className="signUp__formButton">Get Started</button>
           </form>
         </div>
       </div>
