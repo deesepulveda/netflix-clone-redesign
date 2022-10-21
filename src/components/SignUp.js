@@ -27,8 +27,9 @@ function SignUp() {
               className="signUp__input"
               type="email"
               placeholder=" Email"
+              required
             />
-            <button className="signUp__button">Get Started</button>
+            <button>Get Started</button>
           </form>
         </div>
       </div>

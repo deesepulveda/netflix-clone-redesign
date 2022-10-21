@@ -10,7 +10,7 @@ function Hero() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const request = await axios.get(requests.fetchNetflixOriginals);
+      const request = await axios.get(requests.fetchHorrorMovies);
       setMovie(request.data.results[Math.floor(Math.random() * 19)]);
 
       return request;
@@ -70,7 +70,7 @@ function Hero() {
       </header>
       <div className="hero__contentBox">
         <div className="hero__contentTitle">
-          <h2>{movie?.name}</h2>
+          <h2>{movie?.name || movie?.title}</h2>
         </div>
         <div className="hero__contentOverview">
           <p>{truncatingString(movie?.overview, 100)}</p>
